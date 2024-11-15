@@ -13,7 +13,7 @@ authRouter.post("/signup", signUpCtrls);
 // Update Route
 authRouter.put("/update/:name", userUpdateCtrls);
 // Delete Route
-authRouter.delete("/delete/:id", deleteCtrls);
+authRouter.delete("/delete/:name", deleteCtrls);
 
 // Export the authRouter
 module.exports = authRouter;

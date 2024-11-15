@@ -5,6 +5,7 @@ const authRouter = require("./Routes/authRoutes/authRouter");
 const expRouter = require("./Routes/expenceRouter/expRouter");
 const createCollectionRouter = require("./Routes/createCollectionRoutes/createColRoutes");
 const app = express();
+
 app.use(cors());
 // Middleware
 app.use(express.json());

@@ -1,10 +1,14 @@
 const User = require("../../modal/userdb");
+const bcrypt = require("bcrypt");
+const saltRounds = 10;
 let userUpdateCtrls = (req, res) => {
+  const myPlaintextPassword = req.body.password;
+  const hash_password = bcrypt.hashSync(myPlaintextPassword, saltRounds);
   // Simulate user update logic
   const updatedUser = {
     username: req.params.name,
     email: req.body.email,
-    password: req.body.password,
+    password: hash_password,
   };
   User.findOne({ username: updatedUser.username }).then((user) => {
     if (!user) {
