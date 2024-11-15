@@ -11,7 +11,7 @@ authRouter.post("/login", loginCtrls);
 // Sign up Route
 authRouter.post("/signup", signUpCtrls);
 // Update Route
-authRouter.put("/update/:id", userUpdateCtrls);
+authRouter.put("/update/:name", userUpdateCtrls);
 // Delete Route
 authRouter.delete("/delete/:id", deleteCtrls);
 
